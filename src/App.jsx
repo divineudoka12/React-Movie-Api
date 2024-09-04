@@ -67,13 +67,15 @@ function App() {
               <h1 className="text-white text-3xl font-semibold">Movies Info</h1>
             </div>
 
-            <div className="flex justify-between gap-3">
+            
               <form onSubmit={searchMovie}>
-                <input className='border-none px-3 py-1 rounded-lg' type="text" placeholder="Enter a movie name" value={query} onChange={changeHandler} />
+                <div className="flex justify-between gap-3">
+                  <input className='border-none px-3 py-1 rounded-lg' type="text" placeholder="Enter a movie name" value={query} onChange={changeHandler} />
+                  
+                  <button className="bg-red-600 text-white font-semibold rounded-lg px-3 py-1">Search</button>
+                </div>
               </form>
-
-              <button className="bg-red-600 text-white font-semibold rounded-lg px-3 py-1">Search</button>
-            </div>
+            
 
           </nav>
       {content}
